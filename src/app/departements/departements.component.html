@@ -1,0 +1,19 @@
+
+<div class="container w-50">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Département</th>
+            <th scope="col">Code Postal</th>
+            <th scope="col">Code Région</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let departement of departements">
+            <td> {{ departement.nom }} </td>
+            <td> {{ departement.code }} </td>
+            <td> {{ departement.codeRegion }} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
