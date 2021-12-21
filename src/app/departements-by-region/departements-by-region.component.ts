@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DepartementsByRegionService } from 'src/services/departementsByRegion.service';
 import { Departement } from 'src/model/departement';
 
@@ -9,17 +9,25 @@ import { Departement } from 'src/model/departement';
 })
 export class DepartementsByRegionComponent implements OnChanges {
 
-  departements: Departement[] = [];
+  
+  @Input()
   codeRegion: string = '';
+  
+  departements: Departement[] = [];
+
   constructor(private departementsByRegionService: DepartementsByRegionService) { }
 
   ngOnChanges(simpleChanges: SimpleChanges): void {
-  
+
+    const oldValue = simpleChanges.codeRegion.previousValue;
+    const newValue = simpleChanges.codeRegion.currentValue;
+    if (oldValue !== newValue) {
+      this.codeRegion = newValue;
       this.departementsByRegionService.getDepartmentsByCodeRegion(
         this.codeRegion
       ).subscribe((departements) => {
         this.departements = departements;
       });
     }
-
+  }
 }

@@ -7,11 +7,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let region of regions" class="selected-region" routerLink="/departements-par-region"
-      >
+      <tr *ngFor="let region of regions"
+      (click)="selectedCodeRegion = region.code"
+      [class.selected-region]="selectedCodeRegion == region.code"
+  >
         <td> {{ region.nom }} </td>
         <td> {{ region.code }} </td>
       </tr>
     </tbody>
   </table>
+</div>
+<div class="col-6">
+  <app-departements-by-region [codeRegion]="selectedCodeRegion"></app-departements-by-region>
 </div>

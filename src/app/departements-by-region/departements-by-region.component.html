@@ -1,1 +1,21 @@
-<p>departements-by-region works!</p>
+<div *ngIf="codeRegion else noCodeRegion">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Code Postal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let departement of departements">
+          <td>{{departement.nom}}</td>
+          <td>{{departement.code}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <ng-template #noCodeRegion>
+    <p>Cliquez sur une région afin d'en afficher les départements</p>
+  </ng-template>
+  

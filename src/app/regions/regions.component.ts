@@ -12,10 +12,10 @@ export class RegionsComponent implements OnInit {
     regions: Array<Region> = [];
     selectedCodeRegion: string = '';
 
-  constructor(private RegionsService: RegionsService) { }
+  constructor(private regionsService: RegionsService) { }
 
   ngOnInit(): void {
-    this.RegionsService.getRegions().subscribe((regions) => {
+    this.regionsService.getRegions().subscribe((regions) => {
       this.regions = regions;
     });
   }
