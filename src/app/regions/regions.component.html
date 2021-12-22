@@ -1,22 +1,23 @@
-<div class="container">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Région</th>
-        <th scope="col">Code Région</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let region of regions"
-      (click)="selectedCodeRegion = region.code"
-      [class.selected-region]="selectedCodeRegion == region.code"
-  >
-        <td> {{ region.nom }} </td>
-        <td> {{ region.code }} </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="col-6">
-  <app-departements-by-region [codeRegion]="selectedCodeRegion"></app-departements-by-region>
+<h2 class="m-5 text-center text-uppercase display-4 color-blue">Régions de France</h2>
+<hr>
+<div class="container d-flex">
+  <div class="col-6 m-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Région</th>
+          <th scope="col">Code Région</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let region of regions" (click)="selectedCodeRegion = region.code" class="selected">
+          <td> {{ region.nom }} </td>
+          <td> {{ region.code }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6 m-3">
+    <app-departements-by-region [codeRegion]="selectedCodeRegion"></app-departements-by-region>
+  </div>
 </div>

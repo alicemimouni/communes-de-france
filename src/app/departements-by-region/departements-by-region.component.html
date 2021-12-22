@@ -1,4 +1,5 @@
 <div *ngIf="codeRegion else noCodeRegion">
+  <h2 class="mb-5 mt-5 color-blue text-center display-6">Départements de la région {{ codeRegion }} </h2>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -16,6 +17,6 @@
   </div>
   
   <ng-template #noCodeRegion>
-    <p>Cliquez sur une région afin d'en afficher les départements</p>
+    <img src="../../assets/img/carte-de-france.jpg" alt="">
   </ng-template>
   

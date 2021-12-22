@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { DepartementsByRegionService } from 'src/services/departementsByRegion.service';
 import { Departement } from 'src/model/departement';
 
+
 @Component({
   selector: 'app-departements-by-region',
   templateUrl: './departements-by-region.component.html',
@@ -17,10 +18,11 @@ export class DepartementsByRegionComponent implements OnChanges {
 
   constructor(private departementsByRegionService: DepartementsByRegionService) { }
 
-  ngOnChanges(simpleChanges: SimpleChanges): void {
+// ngOnChanges : called when a property is modified
+  ngOnChanges(changes: SimpleChanges): void {
 
-    const oldValue = simpleChanges.codeRegion.previousValue;
-    const newValue = simpleChanges.codeRegion.currentValue;
+    const oldValue = changes['codeRegion'].previousValue;
+    const newValue = changes['codeRegion'].currentValue;
     if (oldValue !== newValue) {
       this.codeRegion = newValue;
       this.departementsByRegionService.getDepartmentsByCodeRegion(
@@ -29,5 +31,7 @@ export class DepartementsByRegionComponent implements OnChanges {
         this.departements = departements;
       });
     }
+
   }
+
 }

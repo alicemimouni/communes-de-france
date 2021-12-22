@@ -1,5 +1,7 @@
-
-<div class="container w-50">
+<h2 class="m-5 text-center text-uppercase display-4 color-blue">Départements de France</h2>
+<hr>
+<div class="container d-flex">
+<div class="col-6 m-3">
     <table class="table table-striped">
         <thead>
           <tr>
@@ -9,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let departement of departements">
+          <tr *ngFor="let departement of departements" (click)="selectedCodeDepartement = departement.code" class="selected">
             <td> {{ departement.nom }} </td>
             <td> {{ departement.code }} </td>
             <td> {{ departement.codeRegion }} </td>
@@ -17,3 +19,7 @@
         </tbody>
       </table>
     </div>
+    <div class="col-6 m-3">
+      <app-communes-by-departement [codeDepartement]="selectedCodeDepartement"></app-communes-by-departement>
+    </div>
+  </div>

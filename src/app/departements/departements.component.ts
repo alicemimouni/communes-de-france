@@ -10,6 +10,7 @@ import { Departement } from 'src/model/departement';
 export class DepartementsComponent implements OnInit {
 
   departements: Array<Departement> = [];
+  selectedCodeDepartement: string = '';
 
 
   constructor(private departementsService: DepartementsService) { }
