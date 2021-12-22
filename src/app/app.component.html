@@ -1,8 +1,17 @@
 
 <img src="../assets/img/regions-2022.jpg" alt="">
-<nav class="background-primary-color mb-5">
-  <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/regions">Régions</a>
-  <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/departements">Départements</a>
+<nav class="background-primary-color mb-5 container-fluid d-flex justify-content-around align-items-center">
+  <div>
+    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/regions">Régions</a>
+    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/departements">Départements</a>
+    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/communes">Communes</a>
+  </div>
+  <form class="d-flex">
+    <input class="form-control me-2" type="search" placeholder="Lyon" aria-label="Search">
+    <button class="btn btn-danger">Rechercher une commune</button>
+  </form>
 </nav>
-
+<div class="col-6 m-3">
+  <app-search-commune [name]="selectedName"></app-search-commune>
+</div>
 <router-outlet></router-outlet>

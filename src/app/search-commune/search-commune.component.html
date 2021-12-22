@@ -1,0 +1,16 @@
+<div *ngIf="name">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Code Postal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commune of communes">
+            <td>{{ commune.nom }}</td>
+            <td>{{ commune.code }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

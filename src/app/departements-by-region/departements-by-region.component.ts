@@ -20,7 +20,6 @@ export class DepartementsByRegionComponent implements OnChanges {
 
 // ngOnChanges : called when a property is modified
   ngOnChanges(changes: SimpleChanges): void {
-
     const oldValue = changes['codeRegion'].previousValue;
     const newValue = changes['codeRegion'].currentValue;
     if (oldValue !== newValue) {
@@ -31,7 +30,5 @@ export class DepartementsByRegionComponent implements OnChanges {
         this.departements = departements;
       });
     }
-
   }
-
 }

@@ -4,7 +4,10 @@ export interface Commune {
     code: string;
     codeRegion: string;
     codeDepartement: string;
-    codePostal: string;
+    codesPostaux: [];
     population: number;
+    lat: number;
+    lon: number;
+    surface: number;
 
 }

@@ -8,7 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DepartementsByRegionComponent } from './departements-by-region/departements-by-region.component';
 import { DepartementsComponent } from './departements/departements.component';
 import { CommunesByDepartementComponent } from './communes-by-departement/communes-by-departement.component';
-import { CommuneDetailComponent } from './commune-detail/commune-detail.component';
+import { CommunesComponent } from './communes/communes.component';
+import { SearchCommuneComponent } from './search-commune/search-commune.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { CommuneDetailComponent } from './commune-detail/commune-detail.componen
     DepartementsByRegionComponent,
     DepartementsComponent,
     CommunesByDepartementComponent,
-    CommuneDetailComponent
+    CommunesComponent,
+    SearchCommuneComponent
   ],
   imports: [
     BrowserModule,

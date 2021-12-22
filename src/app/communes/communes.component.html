@@ -1,0 +1,27 @@
+<h2 class="m-5 text-center text-uppercase display-4 color-blue">Communes de France</h2>
+<hr>
+<div class="container d-flex m-5">
+  <div class="col-6 m-3">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Commune</th>
+          <th scope="col">Code Postal</th>
+          <th scope="col">Département</th>
+          <th scope="col">Région</th>
+          <th scope="col">Habitants</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let commune of communes">
+          <td> {{ commune.nom }} </td>
+          <td class="width-max"> {{ commune.codesPostaux }} </td>
+          <td> {{ commune.codeDepartement }} </td>
+          <td> {{ commune.codeRegion }} </td>
+          <td> {{ commune.population }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
