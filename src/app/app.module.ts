@@ -8,8 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DepartementsByRegionComponent } from './departements-by-region/departements-by-region.component';
 import { DepartementsComponent } from './departements/departements.component';
 import { CommunesByDepartementComponent } from './communes-by-departement/communes-by-departement.component';
-import { CommunesComponent } from './communes/communes.component';
+import { CommuneDetailComponent } from './commune-detail/commune-detail.component';
 import { SearchCommuneComponent } from './search-commune/search-commune.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,8 +20,9 @@ import { SearchCommuneComponent } from './search-commune/search-commune.componen
     DepartementsByRegionComponent,
     DepartementsComponent,
     CommunesByDepartementComponent,
-    CommunesComponent,
-    SearchCommuneComponent
+    CommuneDetailComponent,
+    SearchCommuneComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

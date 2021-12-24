@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Commune } from 'src/model/commune';
-import { CommunesService } from 'src/services/communes.service';
-import { ActivatedRoute } from '@angular/router';
+
+
 
 
 @Component({
@@ -12,19 +11,13 @@ import { ActivatedRoute } from '@angular/router';
 export class AppComponent {
 
   title = 'regions-france';
-  communes: Array<Commune> = [];
-  selectedName: string = '';
 
-  constructor(private communesService: CommunesService, private route:ActivatedRoute) { }
+ 
+
+  constructor() { }
 
   ngOnInit(): void {
 
-    this;this.route.params.subscribe(param => {
-      this.communesService.getCommunes().subscribe((communes) => {
-        this.communes = communes;
-      });
-    });
   }
 
-  
 }

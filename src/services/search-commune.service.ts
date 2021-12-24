@@ -9,12 +9,12 @@ import {sprintf} from "sprintf-js";
 })
 export class SearchCommuneService {
 
-  static urlSearchCommune = 'https://geo.api.gouv.fr/communes?nom=%s&fields=departement&boost=population&limit=5';
+  static urlSearchCommune = 'https://geo.api.gouv.fr/communes/?nom=%s&fields=code,nom,departement,centre,codeDepartement,codeRegion,region,codesPostaux,population,surface&boost=population&limit=5';
 
   constructor(private httpClient: HttpClient) { }
 
-  getSearchCommune(nom: string): Observable<Array<Commune>> {
-    return this.httpClient.get<Array<Commune>>(sprintf(SearchCommuneService.urlSearchCommune, nom));
+  getSearchCommune(name: string): Observable<Array<Commune>> {
+    return this.httpClient.get<Array<Commune>>(sprintf(SearchCommuneService.urlSearchCommune, name));
   }
 
 }

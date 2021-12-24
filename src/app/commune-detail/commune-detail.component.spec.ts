@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CommunesComponent } from './communes.component';
+import { CommunesComponent } from './commune-detail.component';
 
 describe('CommunesComponent', () => {
   let component: CommunesComponent;

@@ -6,7 +6,7 @@
       <thead>
         <tr>
           <th>Commune</th>
-          <th>Code Postal</th>
+          <th>Codes Postaux</th>
           <th>Habitants</th>
 
         </tr>
@@ -14,7 +14,7 @@
       <tbody>
         <tr *ngFor="let commune of communes" class="selected-commune">
           <td>{{commune.nom}}</td>
-          <td>{{commune.code}}</td>
+          <td ><p *ngFor="let codePostal of commune.codesPostaux">{{codePostal}}</p></td>
           <td>{{commune.population}}</td>
         </tr>
       </tbody>

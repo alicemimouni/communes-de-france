@@ -1,32 +1,39 @@
-import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SearchCommuneService } from 'src/services/search-commune.service';
 import { Commune } from 'src/model/commune';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-search-commune',
   templateUrl: './search-commune.component.html',
   styleUrls: ['./search-commune.component.scss']
 })
-export class SearchCommuneComponent implements OnChanges {
+export class SearchCommuneComponent implements OnInit {
 
-  @Input()
-  name: string = '';
-
+  
   communes: Commune[] =[];
+  commune: string = '';
 
-  constructor(private searchCommuneService: SearchCommuneService) { }
+  constructor(private searchCommuneService: SearchCommuneService, private router:Router) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    const oldValue = changes['name'].previousValue;
-    const newValue = changes['name'].currentValue;
-    if (oldValue !== newValue) {
-      this.name = newValue;
-      this.searchCommuneService.getSearchCommune(
-        this.name
-      ).subscribe((communes) => {
-        this.communes = communes;
-      });
+  ngOnInit(): void { }
+
+  getCommunesSearch(name: any) {
+    const keyword = name.target.value;
+    const search = this.searchCommuneService.getSearchCommune(keyword).subscribe((commune) => {
+      this.communes = commune;
+      console.log(this.communes);
+    });
+  }
+
+  getDetailPage(result: any) {
+    console.log(result);
+    const navigationExtras: NavigationExtras = {
+      queryParams: {
+        result: JSON.stringify(result)
+      }
     }
+    this.router.navigate(['commune-detail'], navigationExtras);
   }
   
 }
