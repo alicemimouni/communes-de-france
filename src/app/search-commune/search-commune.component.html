@@ -1,7 +1,7 @@
 <!--search form -->
-<div class="container d-flex flex-column justify-content-center align-items-center">
+<div class="container d-flex flex-column justify-content-start align-items-center">
 
-  <input class="form-control" type="text" (input)="getCommunesSearch($event)" placeholder="Rechercher une commune">
+  <input class="form-control mt-5" type="text" (input)="getCommunesSearch($event)" placeholder="Rechercher une commune">
   <div *ngFor="let result of communes" (click)="getDetailPage(result)" style="cursor: pointer" class="result">
     <p> {{ result.nom }} </p>
   </div>

@@ -1,19 +1,25 @@
-
-<div class="container d-flex justify-content-center mb-5">
-  <div class="card p-4">
-    <h1 class="card-title mb-4 display-4 text-uppercase text-center color-blue">{{ communeDetail.nom }}</h1>
-    <hr>
-    <div class="d-flex m-4">
-    <img src="../../assets/img/champs-france.jpg" class="card-img-top" alt="Champs de France">
-    <div class="card-body">
-      <h5>Département : {{ communeDetail.departement.nom }} ( {{ communeDetail.departement.code }} ) </h5>
-      <p>Codes Postaux : <span *ngFor="let codePostal of communeDetail.codesPostaux"> {{ codePostal }} </span>
+<div class="container card d-flex justify-content-center align-items-center mb-5 pt-4 pb-4">
+  <h1 class="card-title display-4 text-uppercase text-center color-blue">{{ communeDetail.nom }}</h1>
+  <div class="d-flex justify-content-center align-items-start">
+    <div class="d-flex justify-content-center align-items-center m-4">
+      <!-- display a city image if population is greater than 2000 -->
+      <div *ngIf="communeDetail.population < 2000; else townImage">
+        <img src="../../assets/img/champs-france.jpg" class="card-img-top" alt="Champs de France">
+      </div>
+      <ng-template #townImage>
+        <img #townImage src="../../assets/img/ville-de-france.jpg" class="card-img-top" alt="Champs de France">
+      </ng-template>
+    </div>
+    <div class="card-body mt-3">
+      <h5 class="mb-3">Département : {{ communeDetail.departement.nom }} ( {{ communeDetail.departement.code }} ) </h5>
+      <h5 class="mb-3">Région : {{ communeDetail.region.nom }} </h5>
+      <!-- display all postal codes -->
+      <p>Codes Postaux : <span *ngFor="let codePostal of communeDetail.codesPostaux">   {{ codePostal }} - </span>
       </p>
-      <p class="card-text mt-4 mb-4">Habitants :  {{ communeDetail.population }}<br> 
-        Superficie : {{ communeDetail.surface }} hectares</p>
+      <p>Habitants : {{ communeDetail.population }}</p>
+        <p>Superficie : {{ communeDetail.surface }} hectares</p>
       <!-- todo -->
       <!-- <a href="https://www.google.com/maps/@ {{ communeDetail.centre.coordinates }}" class="btn btn-outline-primary" target="_blank">Voir sur la carte</a> -->
-    </div>
     </div>
   </div>
 </div>
