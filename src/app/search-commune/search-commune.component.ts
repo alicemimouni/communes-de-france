@@ -19,6 +19,8 @@ export class SearchCommuneComponent implements OnInit {
   ngOnInit(): void { }
 
   getCommunesSearch(name: any) {
+    console.log(name);
+    console.log(typeof name);
     const keyword = name.target.value;
     const search = this.searchCommuneService.getSearchCommune(keyword).subscribe((commune) => {
       this.communes = commune;
