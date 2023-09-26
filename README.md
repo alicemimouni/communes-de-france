@@ -1,3 +1,12 @@
+Régions de France
+#################
+
+Application Angular réalisée pour la soutenance finale TP Développeur web fullstack.
+Cette application web permet d'afficher les départements d'une région et les communes d'un département.
+Elle permet également de voir le détail d'une commune et de rechercher une commune en particulier.
+Réalisé avec l'API geo.api.gouv.fr.
+
+
 # RegionsFrance
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
