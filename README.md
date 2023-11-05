@@ -9,10 +9,9 @@ Ce projet est réalisé avec l'**API** geo.api.gouv.fr.
 
 ## Technologies utilisées
 
-Pour ce projet, le framework **Angular** me semblait le plus adapté, j'ai utilisé **Bootstrap** pour faciliter le CSS.
+Pour ce projet, j'ai choisi le framework **Angular** qui me semblait le plus adapté, et j'ai utilisé **Bootstrap** pour simplifier la gestion du CSS.
 
 ## Conclusion
 
-J'ai pu à travers ce projet monter en compétence avec Angular et l'utilisation d'API. 
-
+Grâce à ce projet, j'ai pu améliorer mes compétences en Angular et dans l'utilisation d'API.
 
