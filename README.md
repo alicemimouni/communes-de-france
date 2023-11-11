@@ -1,6 +1,6 @@
  # APPLICATION RÉGIONS DE FRANCE
 
-![Capture d’écran (21)](https://github.com/alicemimouni/regions-france-angular-api/assets/82211729/0655e80c-afcc-4d44-ae46-8bb3fd117b4e)
+![Capture d’écran (24)](https://github.com/alicemimouni/regions-france-angular-api/assets/82211729/ac76d9f1-f11b-435a-916e-5c9eaa79bf81)
 
 ## Présentation
 
