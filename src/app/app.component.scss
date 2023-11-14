@@ -1,12 +1,35 @@
-// image size
-img {
-    width: 100%;
+.header {
+
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        position: absolute;
+        top: 0; /* Ajustez la position verticale selon vos besoins */
+        right: 0; /* Ajustez la position horizontale selon vos besoins */
+        bottom: 0; /* Ajustez la position verticale selon vos besoins */
+        left: 0; /* Ajustez la position horizontale selon vos besoins */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+    }
 }
+
+footer {
+
+    .author {
+        font-size: 0.8rem;
+    }
+}
+
+
 // color
 .background-primary-color {
     background-color: #223C77;
-}
-
-input {
-    width: 300px;
 }

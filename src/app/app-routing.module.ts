@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'departements-par-region', component: DepartementsByRegionComponent },
   { path: 'communes-par-departement', component: CommunesByDepartementComponent },
   { path: 'commune-detail', component: CommuneDetailComponent },
-  { path: 'commune', component: SearchCommuneComponent },
   { path: '', component: HomeComponent }
 ];
 

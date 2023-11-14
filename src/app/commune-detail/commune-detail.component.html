@@ -1,25 +1,37 @@
-<div class="container card d-flex justify-content-center align-items-center mb-5 pt-4 pb-4">
-  <h1 class="card-title display-4 text-uppercase text-center color-blue">{{ communeDetail.nom }}</h1>
-  <div class="d-flex justify-content-center align-items-start">
-    <div class="d-flex justify-content-center align-items-center m-4">
-      <!-- display a city image if population is greater than 2000 -->
+<div class=" mt-3 container card border-0 d-flex justify-content-start flex-column align-items-center pt-4 pb-4" id="detail-commune">
+  <h1 class="text-center card-title p-3 fw-medium border border-danger border-5">{{ communeDetail.nom }}</h1>
+  <div class="d-flex justify-content-center align-items-center">
+    <!-- display a city image if population is greater than 2000 -->
+    <!-- <div class="d-flex justify-content-center align-items-center m-4">
       <div *ngIf="communeDetail.population < 2000; else townImage">
         <img src="../../assets/img/champs-france.jpg" class="card-img-top" alt="Champs de France">
       </div>
       <ng-template #townImage>
         <img #townImage src="../../assets/img/ville-de-france.jpg" class="card-img-top" alt="Champs de France">
       </ng-template>
-    </div>
-    <div class="card-body mt-3">
-      <h5 class="mb-3">Département : {{ communeDetail.departement.nom }} ( {{ communeDetail.departement.code }} ) </h5>
-      <h5 class="mb-3">Région : {{ communeDetail.region.nom }} </h5>
-      <!-- display all postal codes -->
-      <p>Codes Postaux : <span *ngFor="let codePostal of communeDetail.codesPostaux">   {{ codePostal }} - </span>
-      </p>
-      <p>Habitants : {{ communeDetail.population }}</p>
-        <p>Superficie : {{ communeDetail.surface }} hectares</p>
+    </div> -->
+    <div class="card-body text-center">
+      <div>
+        <b>Code INSEE : </b><span>{{ communeDetail.code }}</span>
+      </div>
+      <div>
+        <b>Codes postaux : </b><span *ngFor="let codePostal of communeDetail.codesPostaux">   {{ codePostal }}  </span>
+      </div>
+      <div>
+        <b>Population municipale : </b><span>{{ communeDetail.population }}</span>
+      </div>
+      <div>
+        <b>Surface en hectares : </b><span>{{ communeDetail.surface }}</span>
+      </div>
+      <div>
+        <b>Département : </b><span>{{ communeDetail.departement.nom }} ({{ communeDetail.departement.code }}) </span>
+      </div>
+      <div>
+        <b>Région : </b><span>{{ communeDetail.region.nom }} </span>
+      </div>
       <!-- todo -->
       <!-- <a href="https://www.google.com/maps/@ {{ communeDetail.centre.coordinates }}" class="btn btn-outline-primary" target="_blank">Voir sur la carte</a> -->
     </div>
   </div>
+  <a routerLink="/" class="btn btn-outline-primary">Retour à l'accueil</a>
 </div>

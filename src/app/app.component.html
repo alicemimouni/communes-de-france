@@ -1,11 +1,24 @@
 
-<img src="../assets/img/regions-2022.jpg" alt="Donner vie à l'avenir">
-<nav class="background-primary-color mb-5 container-fluid d-flex justify-content-around align-items-center">
-  <div>
-    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/">Accueil</a>
-    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/regions">Régions</a>
-    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/departements">Départements</a>
-    <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/commune">Communes</a>
-  </div>  
-</nav>
+<header>
+  <nav class="navbar navbar-expand-lg background-primary-color container-fluid">
+    <div class="w-100 d-flex justify-content-around align-items-center">
+      <a class="btn text-uppercase text-white" color="primary" routerLink="/">Accueil</a>
+      <a class="btn text-uppercase text-white" color="primary" routerLink="/regions">Régions</a>
+      <a class="btn text-uppercase text-white" color="primary" routerLink="/departements">Départements</a>
+      <!-- <a class="btn text-uppercase text-white m-3" color="primary" routerLink="/commune">Communes</a> -->
+    </div>  
+  </nav>
+  <div class="header">
+    <img src="../assets/img/paris-nuit-vue-ciel.jpg" alt="Communes de France.">
+    <h1>Communes de France</h1>
+  </div>
+</header>
+
 <router-outlet></router-outlet>
+
+<footer class="background-primary-color text-white pt-3">
+  <div class="menu-links d-flex align-items-center justify-content-around mb-5">
+    <a class="text-white" href="">Accueil</a><a class="text-white" href="">Régions</a><a class="text-white" href="">Départements</a>
+  </div>
+  <div class="author text-center pb-3">Alice Mimouni - 2023</div>
+</footer>
