@@ -4,13 +4,12 @@
 
 ## Présentation
 
-J'ai développé cette application web dans le cadre de ma soutenance pour l'obtention du Titre professionnel de Développeur web fullstack. Cette application permet de visualiser les régions, départements et communes de France. De plus, elle offre la possibilité de rechercher une commune et d'accéder à ses détails.
+J'ai développé une application permettant de visualiser les régions, départements et communes de France. De plus, elle offre la possibilité de rechercher une commune et d'accéder à ses détails.
 Ce projet est réalisé avec l'**API** geo.api.gouv.fr.
-
 
 ## Technologies utilisées
 
-Pour ce projet, j'ai choisi le framework **Angular** qui me semblait le plus adapté, et j'ai utilisé **Bootstrap** pour simplifier la gestion du CSS.
+Pour ce projet, j'ai choisi le framework **Angular**, et j'ai utilisé **Bootstrap** pour simplifier la gestion du CSS.
 
 En cliquant sur un département, les communes apparaissent.
 ![Capture d’écran (23)](https://github.com/alicemimouni/regions-france-angular-api/assets/82211729/3d3327c1-bae7-483a-b309-4387a3753f96)
