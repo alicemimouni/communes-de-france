@@ -20,4 +20,14 @@ export class RegionsComponent implements OnInit {
     });
   }
 
+  getDepartements() {
+    // scroll to departements
+    setTimeout(() => {
+      const departementsResult = document.getElementById('departements-result');
+      if (departementsResult) {
+        departementsResult.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0);
+  }
+
 }

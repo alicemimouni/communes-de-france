@@ -21,4 +21,14 @@ export class DepartementsComponent implements OnInit {
     });
   }
 
+  getCommunes() {
+    // scroll to communes
+    setTimeout(() => {
+      const communesResult = document.getElementById('communes-result');
+      if (communesResult) {
+        communesResult.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 0);
+  }
+
 }

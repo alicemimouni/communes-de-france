@@ -14,7 +14,7 @@ export class DepartementsByRegionService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getDepartmentsByCodeRegion(codeRegion: string): Observable<Array<Departement>> {
+  getdepartementsByCodeRegion(codeRegion: string): Observable<Array<Departement>> {
     return this.httpClient.get<Array<Departement>>(
       sprintf(DepartementsByRegionService.urlDepartementsByRegion, codeRegion)
     );

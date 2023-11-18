@@ -1,28 +1,21 @@
-
-
-<div *ngIf="codeDepartement else noCodeDepartement">
-    <h2 class="mb-5 mt-5 color-blue text-center display-6">Communes du département {{ codeDepartement }} </h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Commune</th>
-          <th>Codes Postaux</th>
-          <th>Habitants</th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let commune of communes" class="selected-commune">
-          <td>{{commune.nom}}</td>
-          <td ><p *ngFor="let codePostal of commune.codesPostaux">{{codePostal}}</p></td>
-          <td>{{commune.population}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <!--if no department is selected -->
-  <ng-template #noCodeDepartement>
-    <img src="../../assets/img/carte-de-france.jpg" alt="">
-  </ng-template>
-  
-  
+<div *ngIf="codeDepartement">
+  <h2 class="mb-5 mt-5 color-blue text-center display-6">Communes du département {{ codeDepartement }} </h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Commune</th>
+        <th>Codes Postaux</th>
+        <th>Habitants</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let commune of communes" class="selected-commune">
+        <td>{{commune.nom}}</td>
+        <td>
+          <p *ngFor="let codePostal of commune.codesPostaux">{{codePostal}}</p>
+        </td>
+        <td>{{commune.population}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,25 +1,26 @@
 <h2 class="m-5 text-center text-uppercase display-4 color-blue">Départements de France</h2>
 <hr>
-<div class="container d-flex">
-<div class="col-6 m-3">
+<div class="container d-flex flex-column align-items-center justify-content-center">
+  <div class="col-6 w-100">
     <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Département</th>
-            <th scope="col">Code Postal</th>
-            <th scope="col">Code Région</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let departement of departements" (click)="selectedCodeDepartement = departement.code" class="selected">
-            <td> {{ departement.nom }} </td>
-            <td> {{ departement.code }} </td>
-            <td> {{ departement.codeRegion }} </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-6 m-3">
-      <app-communes-by-departement [codeDepartement]="selectedCodeDepartement"></app-communes-by-departement>
-    </div>
+      <thead>
+        <tr>
+          <th scope="col">Département</th>
+          <th scope="col">Code Postal</th>
+          <th scope="col">Code Région</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let departement of departements" (click)="selectedCodeDepartement = departement.code; getCommunes()"
+          class="selected">
+          <td> {{ departement.nom }} </td>
+          <td> {{ departement.code }} </td>
+          <td> {{ departement.codeRegion }} </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+  <div class="col-6 w-100" id="communes-result">
+    <app-communes-by-departement [codeDepartement]="selectedCodeDepartement"></app-communes-by-departement>
+  </div>
+</div>

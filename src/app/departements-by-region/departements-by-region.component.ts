@@ -24,7 +24,7 @@ export class DepartementsByRegionComponent implements OnChanges {
     const newValue = changes['codeRegion'].currentValue;
     if (oldValue !== newValue) {
       this.codeRegion = newValue;
-      this.departementsByRegionService.getDepartmentsByCodeRegion(
+      this.departementsByRegionService.getdepartementsByCodeRegion(
         this.codeRegion
       ).subscribe((departements) => {
         this.departements = departements;
