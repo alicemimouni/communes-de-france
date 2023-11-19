@@ -20,6 +20,10 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "deploy": {
+          "builder": "@azure/ng-deploy:deploy",
+          "options": {}
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
