@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "regions-france:build:production"
+              "buildTarget": "regions-france:build:production"
             },
             "development": {
-              "browserTarget": "regions-france:build:development"
+              "buildTarget": "regions-france:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "regions-france:build"
+            "buildTarget": "regions-france:build"
           }
         },
         "test": {
