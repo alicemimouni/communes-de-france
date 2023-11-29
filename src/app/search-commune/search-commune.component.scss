@@ -1,6 +1,14 @@
 
 .search-form-container {
 
+    width: 300px;
+    margin: auto;
+
+    input {
+        width: 250px;
+        height: 50px;
+    }
+    
     input:focus {
         box-shadow: none;
     }
@@ -19,7 +27,3 @@
     background-color: #223C77;
 }
 
-input {
-    width: 250px;
-    height: 30px;
-}

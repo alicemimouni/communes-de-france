@@ -1,10 +1,10 @@
 <!--search form -->
-<div class="search-form-container mb-5 d-flex flex-row align-items-start justify-content-center">
+<div class="search-form-container border mb-5 d-flex flex-row align-items-center justify-content-center">
   <div class="d-flex flex-column justify-content-start align-items-center">
-    <input class="form-control border me-3" type="text" (input)="getCommunesSearch($event)" placeholder="Rechercher une commune">
+    <input class="form-control border  border-0" type="text" (input)="getCommunesSearch($event)" placeholder="Rechercher une commune">
     <div *ngFor="let result of communes" (click)="getDetailPage(result)" style="cursor: pointer" class="result">
       <p> {{ result.nom }} </p>
     </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="#d1d1d1" fill-rule="evenodd" d="M14.385 15.446a6.751 6.751 0 1 1 1.06-1.06l5.156 5.155a.75.75 0 1 1-1.06 1.06l-5.156-5.155ZM6.46 13.884a5.25 5.25 0 1 1 7.43-.005l-.005.005l-.005.004a5.25 5.25 0 0 1-7.42-.004Z" clip-rule="evenodd"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="#d1d1d1" fill-rule="evenodd" d="M14.385 15.446a6.751 6.751 0 1 1 1.06-1.06l5.156 5.155a.75.75 0 1 1-1.06 1.06l-5.156-5.155ZM6.46 13.884a5.25 5.25 0 1 1 7.43-.005l-.005.005l-.005.004a5.25 5.25 0 0 1-7.42-.004Z" clip-rule="evenodd"/></svg>
 </div>
