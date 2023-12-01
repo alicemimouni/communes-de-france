@@ -27,7 +27,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/communes-de-france",
+            "outputPath": "docs/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,14 +78,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "regions-france:build"
+            "browserTarget": "communes-de-france:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "regions-france:build:production"
+              "browserTarget": "communes-de-france:build:production"
             },
             "development": {
-              "browserTarget": "regions-france:build:development"
+              "browserTarget": "communes-de-france:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "regions-france:build"
+            "browserTarget": "communes-de-france:build"
           }
         },
         "test": {
