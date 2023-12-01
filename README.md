@@ -1,5 +1,7 @@
  # APPLICATION RÉGIONS DE FRANCE
 
+ [VOIR LE PROJET EN LIGNE](https://alicemimouni.github.io/communes-de-france/)
+
 ![Capture d’écran (24)](https://github.com/alicemimouni/regions-france-angular-api/assets/82211729/ac76d9f1-f11b-435a-916e-5c9eaa79bf81)
 
 ## Présentation
@@ -26,3 +28,4 @@ J'ai réalisé un formulaire de recherche pour les communes
 
 Grâce à ce projet, j'ai pu améliorer mes compétences en **Angular** et dans l'utilisation des **API**. Je travaille actuellement sur l'amélioration de cette application en y ajoutant davantage de contenu, tel que des données météorologiques par ville. Prochainement, vous pourrez consulter en ligne le résultat !
 
+ [VOIR LE PROJET EN LIGNE](https://alicemimouni.github.io/communes-de-france/)
