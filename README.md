@@ -1,4 +1,4 @@
- # APPLICATION RÉGIONS DE FRANCE
+ # APPLICATION COMMUNES DE FRANCE
 
  [VOIR LE PROJET EN LIGNE](https://alicemimouni.github.io/communes-de-france/)
 
