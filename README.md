@@ -16,8 +16,4 @@ Pour ce projet, j'ai choisi le framework **Angular**, et j'ai utilisé **Bootstr
 En cliquant sur un département, les communes apparaissent.
 De même pour les régions.
 
-## Conclusion
-
-Grâce à ce projet, j'ai pu améliorer mes compétences en **Angular** et dans l'utilisation des **API**. 
-
- [VOIR LE PROJET EN LIGNE](https://alicemimouni.github.io/communes-de-france/)
+[VOIR LE PROJET EN LIGNE](https://alicemimouni.github.io/communes-de-france/)
